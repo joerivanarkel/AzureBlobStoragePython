@@ -6,6 +6,8 @@ name = "pypi"
 [packages]
 python-dotenv = "*"
 azure-storage-blob = "*"
+pytest = "*"
+pytest-dotenv = "*"
 
 [dev-packages]
 

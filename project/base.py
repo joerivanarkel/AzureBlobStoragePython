@@ -29,4 +29,6 @@ blob_client = blob_service_client.get_blob_client(container=container_name, blob
 BlobModule.upload_blob(local_file_name, upload_file_path, blob_client)
 BlobModule.list_blobs(container_client)
 BlobModule.download_blob(local_path, local_file_name, container_client)
+print("Press the Enter key to begin clean up")
+input()
 BlobModule.delete_blob(container_client, upload_file_path, download_file_path, local_path)
