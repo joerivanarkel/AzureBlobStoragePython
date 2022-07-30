@@ -1,2 +1,3 @@
 # AzureBlobStoragePython
-Creating, Fetching, Listing and Deleting from Azure Blob Storage
+
+pipenv, python-dotenv, azure-storage-blob, pytest, pytest-dotenv
