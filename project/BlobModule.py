@@ -15,8 +15,7 @@ class BlobModule:
         """
         print(f"Uploading to Azure Storage as blob: {local_file_name}")
         try:
-            with open(upload_file_path, "rb") as data:
-                blob_client.upload_blob(data)
+            blob_client.upload_blob(open(upload_file_path, "rb"))
             return True
         except Exception as ex:
             print(ex)
@@ -55,8 +54,8 @@ class BlobModule:
         print(f"Downloading blob to {download_file_path}")
 
         try:
-            with open(download_file_path, "wb") as download_file:
-                download_file.write(container_client.download_blob(local_file_name).readall())
+            download_file = open(download_file_path, "wb")
+            download_file.write(container_client.download_blob(local_file_name).readall())
             return True
         except Exception as ex:
             print(ex)
